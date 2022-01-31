@@ -2,7 +2,7 @@
 
 Auto-generates the Lightdash metrics layer schema.yml file
 
-##Assumptions and Pre-requisites
+## Assumptions and Pre-requisites
 
 1. Cloud data warehouse is Google Bigquery
 - because of dependency on INFORMATION_SCHEMA, though it may still work with Snowflake etc
@@ -10,7 +10,7 @@ Auto-generates the Lightdash metrics layer schema.yml file
 - STRING and other BQ-specific datatypes, though these could be changed to VARCHAR etc if running on Snowflake
 2. All metric columns have a datatype of FLOAT64 or NUMERIC
 
-##Usage Instructions
+## Usage Instructions
 
 Run this macro using the following CLI command:
 
@@ -21,7 +21,7 @@ Run this macro using the following CLI command:
   tail -n +3 > schema.yml
  ```
 
- ##Next Steps
+ ## Next Steps
 
  After this you will still need to do the following with the schema.yml file:
 
