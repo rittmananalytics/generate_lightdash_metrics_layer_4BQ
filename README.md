@@ -12,7 +12,18 @@ Auto-generates the Lightdash metrics layer schema.yml file
 
 ## Usage Instructions
 
-Run this macro using the following CLI command:
+Run this macro using the following CLI command, using the following parameter values:
+
+- table_schema : BigQuery dataset name for which you want to generate the schema.yml for
+- model_prefix : prefix, if any, you give models in dbt that are not used in the actual table name, for example in dbt your model may be called "wh_products_dim" but deployed in BigQuery as "products_dim"
+- pk_suffix : the suffix, including any underscores, you give your primary key columns, for example "_pk"
+
+```
+dbt run-operation generate_metrics_schema --args '{table_schema: analytics, model_prefix: wh_, pk_suffix: _pk}'
+```
+
+To run the macro end-to-end, feeding the results into BigQuery and then outputting the resulting yaml as a schema.yml file:
+
 
 ```
  dbt run-operation generate_metrics_schema --args '{table_schema: analytics, model_prefix: wh_, pk_suffix: _pk}' | \
