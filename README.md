@@ -23,13 +23,13 @@ Run this macro using the following CLI command:
 
  ## Example Output
 
- 1. From running macro on its own, outputting the generated SQL to a file: [schema.sql](https://github.com/rittmananalytics/generate_lightdash_metrics_layer_4BQ/main/example_output/schema.sql)
+ 1. From running macro on its own, outputting the generated SQL to a file: [schema.sql](https://github.com/rittmananalytics/generate_lightdash_metrics_layer_4BQ/blob/main/example_output/schema.sql)
 
  ```
  dbt run-operation generate_metrics_schema --args '{table_schema: analytics, model_prefix: wh_, pk_suffix: _pk}' > schema.sql
  ```
 
- 2. From executing this SQL and generating the yaml schema file: [schema.yml](https://github.com/rittmananalytics/generate_lightdash_metrics_layer_4BQ/main/example_output/schema.yml)
+ 2. From executing this SQL and generating the yaml schema file: [schema.yml](https://github.com/rittmananalytics/generate_lightdash_metrics_layer_4BQ/blob/main/example_output/schema.yml)
 
  ## Next Steps
 
